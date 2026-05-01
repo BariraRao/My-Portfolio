@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="google-site-verification" content="p6LkctfKZbbiP9ev9V0UmRZn8N1XHsM1ZhSzzXbH7fQ" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B. Rao | Technical SEO Strategist Portfolio</title>
-    <meta name="description" content="Official portfolio of B. Rao. Specializing in Technical SEO, Web Performance, and Data-driven search strategies.">
-    
+    <title>Barira Rao | Technical SEO Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #0f172a; color: #f8fafc; text-align: center; }
-        .hero { padding: 80px 20px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); border-bottom: 2px solid #38bdf8; }
-        h1 { font-size: 2.5rem; margin: 0; color: #38bdf8; }
-        .sub-text { font-size: 1.2rem; color: #94a3b8; margin-top: 10px; }
-        .content { max-width: 700px; margin: 40px auto; padding: 0 20px; text-align: left; }
-        .card { background: #1e293b; padding: 25px; border-radius: 12px; margin-bottom: 20px; border: 1px solid #334155; }
-        .tag { background: #38bdf8; color: #0f172a; padding: 4px 12px; border-radius: 15px; font-weight: bold; font-size: 0.8rem; margin-right: 5px; display: inline-block; }
-        footer { margin-top: 50px; padding: 20px; font-size: 0.8rem; color: #64748b; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body>
+<body class="p-6 md:p-20">
 
-    <header class="hero">
-        <h1>B. Rao ⚡</h1>
-        <p class="sub-text">Technical SEO Expert & BSCS Scholar</p>
-    </header>
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-16">
+            <h1 class="text-5xl font-bold mb-2 gradient-text">B. Rao <span class="text-white"></span></h1>
+            <p class="text-xl text-slate-400">BSCS Scholar & Technical SEO Strategist</p>
+            
+            <div class="flex gap-4 mt-6">
+                <a href="#" class="text-slate-400 hover:text-sky-400 transition text-2xl"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-slate-400 hover:text-white transition text-2xl"><i class="fab fa-github"></i></a>
+                <a href="mailto:barirajamilrao@gmail.com" class="text-slate-400 hover:text-red-400 transition text-2xl"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
 
-    <div class="content">
-        <div class="card">
-            <h2>Mission</h2>
-            <p>I build web experiences that search engines love and users enjoy. My focus is on technical excellence and ranking algorithms.</p>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="glass p-8 rounded-2xl">
+                <h3 class="text-sky-400 font-bold mb-4">The Mission</h3>
+                <p class="text-slate-300 leading-relaxed">
+                    Analyzing complex algorithms to bridge the gap between human intent and search engine results. Specializing in technical audits and performance optimization.
+                </p>
+            </div>
+
+            <div class="glass p-8 rounded-2xl border-l-4 border-sky-500">
+                <h3 class="text-sky-400 font-bold mb-4">Core Stack</h3>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <span class="bg-sky-500/10 text-sky-400 px-3 py-1 rounded-full border border-sky-500/20">Google Search Console</span>
+                    <span class="bg-indigo-500/10 text-indigo-400 px-3 py-1 rounded-full border border-indigo-500/20">JavaScript SEO</span>
+                    <span class="bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full border border-emerald-500/20">Data Structures</span>
+                    <span class="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full border border-purple-500/20">Technical Audits</span>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Core Skills</h2>
-            <div class="tag">Technical Audit</div>
-            <div class="tag">Search Algorithms</div>
-            <div class="tag">JS Optimization</div>
-            <div class="tag">Data Structures</div>
-        </div>
+        <footer class="mt-20 text-slate-500 text-sm border-t border-slate-800 pt-8 flex justify-between items-center">
+            <p>© 2026 Multan, PK. All rights reserved.</p>
+            <p class="hover:text-sky-400 transition cursor-pointer">Live via GitHub Pages</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>Managed by B. Rao Portfolio Lab | Updated 2026</p>
-    </footer>
 
 </body>
 </html>
