@@ -1,107 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rao's Collection | Premium Gems</title>
+    <meta charset="UTF-8"><title>Barira Rao's Collection</title>
     <style>
-        :root { --bg: #ffffff; --text: #333; --card: #ffffff; --gold: #b08d21; --head: #f9f9f9; }
-        [data-theme="dark"] { --bg: #0a0a0a; --text: #eee; --card: #111; --head: #151515; }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', serif; }
-        body { background: var(--bg); color: var(--text); transition: 0.5s; text-align: center; }
-
-        .top-nav { display: flex; justify-content: flex-end; gap: 10px; padding: 15px 20px; position: absolute; width: 100%; top: 0; z-index: 100; }
-        .btn-sm { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; cursor: pointer; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; }
-
-        header { padding: 90px 20px 40px; background: var(--head); border-bottom: 1px solid rgba(176,141,33,0.1); }
-        h1 { color: var(--gold); font-size: 2.2rem; letter-spacing: 5px; text-transform: uppercase; }
-        header p { color: #888; font-size: 0.9rem; margin-top: 10px; letter-spacing: 2px; }
-
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px 20px; }
-        .card { background: var(--card); width: 100%; max-width: 340px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(176,141,33,0.15); box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(176,141,33,0.1); }
-        .card img { width: 100%; height: auto; display: block; }
-        
-        .info { padding: 25px; text-align: left; }
-        .title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-        .title-row h3 { color: var(--gold); font-size: 1.2rem; font-weight: 600; }
-        .price { font-weight: bold; font-size: 1.1rem; color: var(--text); }
-        .details { color: #777; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; }
-        
-        .buy-btn { width: 100%; padding: 14px; background: var(--gold); color: white; border: none; font-weight: bold; cursor: pointer; letter-spacing: 1.5px; border-radius: 6px; transition: 0.3s; }
-        .buy-btn:hover { background: #8e721a; }
+        :root { --gold: #c5a059; --dark: #0a0a0a; --card: #141414; }
+        body { background: var(--dark); color: #fff; font-family: 'Georgia', serif; margin: 0; text-align: center; }
+        .nav { padding: 20px; display: flex; justify-content: flex-end; gap: 20px; }
+        header { padding: 60px 0; border-bottom: 1px solid #222; }
+        h1 { font-size: 2.5rem; letter-spacing: 8px; color: var(--gold); }
+        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 50px; }
+        .card { background: var(--card); width: 320px; border: 1px solid #222; border-radius: 4px; overflow: hidden; text-align: left; transition: 0.4s; }
+        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
+        .info { padding: 20px; }
+        .price { color: var(--gold); font-size: 1.2rem; font-weight: bold; }
+        .details { font-size: 0.8rem; color: #888; margin: 10px 0; height: 40px; }
+        .btn { width: 100%; padding: 12px; background: var(--gold); border: none; font-weight: bold; cursor: pointer; }
     </style>
 </head>
 <body>
-
-    <script>
-        if (!localStorage.getItem('user')) { window.location.href = "login.html"; }
-    </script>
-
-    <div class="top-nav">
-        <button class="btn-sm" onclick="toggleTheme()" id="tBtn">Dark Mode</button>
-        <button class="btn-sm" onclick="logout()">Logout</button>
-    </div>
-
-    <header>
-        <h1>RAO'S COLLECTION</h1>
-        <p>TIMLESS ELEGANCE & RARE STONES</p>
-    </header>
-
-    <div class="grid">
+    <script>if(!localStorage.getItem('user')) window.location.href="login.html";</script>
+    <div class="nav"><button onclick="localStorage.removeItem('user');location.href='login.html'">LOGOUT</button></div>
+    <header><h1>BARIRA RAO</h1><p>THE LUXURY COLLECTION</p></header>
+       <div class="grid">
         <div class="card">
-            <img src="s1.jpg" alt="Sapphire">
+            <img src="s1.jpg" alt="Royal Sapphire">
             <div class="info">
                 <div class="title-row"><h3>Royal Sapphire</h3><span class="price">$1,200</span></div>
                 <p class="details">Origin: Sri Lanka | Clarity: VVS Grade<br>Deep velvet blue with exceptional sparkle.</p>
-                <button class="buy-btn" onclick="sendEmail('Royal Sapphire')">INQUIRE NOW</button>
+                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Royal Sapphire'">INQUIRE NOW</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="o1.png" alt="Opal">
+            <img src="o1.png" alt="Mexican Fire Opal">
             <div class="info">
                 <div class="title-row"><h3>Mexican Fire Opal</h3><span class="price">$850</span></div>
                 <p class="details">Origin: Mexico | Effect: Iridescent Glow<br>A rare gem with a play of fiery colors.</p>
-                <button class="buy-btn" onclick="sendEmail('Mexican Fire Opal')">INQUIRE NOW</button>
+                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Mexican Fire Opal'">INQUIRE NOW</button>
             </div>
         </div>
 
         <div class="card">
-            <img src="e1.png" alt="Emerald">
+            <img src="e1.png" alt="Royal Emerald">
             <div class="info">
                 <div class="title-row"><h3>Royal Emerald</h3><span class="price">$1,500</span></div>
                 <p class="details">Origin: Colombia | Clarity: Eye-Clean<br>Vibrant green with a classic emerald cut.</p>
-                <button class="buy-btn" onclick="sendEmail('Royal Emerald')">INQUIRE NOW</button>
+                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Royal Emerald'">INQUIRE NOW</button>
             </div>
         </div>
-    </div>
-
-    <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const btn = document.getElementById('tBtn');
-            if (html.hasAttribute('data-theme')) {
-                html.removeAttribute('data-theme');
-                btn.innerText = "Dark Mode";
-            } else {
-                html.setAttribute('data-theme', 'dark');
-                btn.innerText = "Light Mode";
-            }
-        }
-
-        function logout() {
-            localStorage.removeItem('user');
-            window.location.href = "login.html";
-        }
-
-        function sendEmail(gemName) {
-            const email = "btwsamiyamalik@gmail.com";
-            const subject = "Inquiry: " + gemName;
-            const body = "I am interested in the " + gemName + ". Please share availability.";
-            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        }
-    </script>
+       </div>
 </body>
 </html>
