@@ -11,25 +11,30 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', serif; }
         body { background: var(--bg); color: var(--text); transition: 0.5s; text-align: center; }
 
-        .top-nav { display: flex; justify-content: flex-end; gap: 10px; padding: 15px 20px; position: absolute; width: 100%; top: 0; }
-        .btn-sm { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 4px 10px; cursor: pointer; font-size: 0.6rem; letter-spacing: 1px; text-transform: uppercase; }
+        .top-nav { display: flex; justify-content: flex-end; gap: 10px; padding: 15px 20px; position: absolute; width: 100%; top: 0; z-index: 100; }
+        .btn-sm { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; cursor: pointer; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase; border-radius: 4px; }
 
-        header { padding: 80px 20px 40px; background: var(--head); border-bottom: 1px solid rgba(176,141,33,0.1); }
-        h1 { color: var(--gold); font-size: 2.2rem; letter-spacing: 5px; }
-        header p { color: #888; font-size: 0.9rem; margin-top: 10px; }
+        header { padding: 90px 20px 40px; background: var(--head); border-bottom: 1px solid rgba(176,141,33,0.1); }
+        h1 { color: var(--gold); font-size: 2.2rem; letter-spacing: 5px; text-transform: uppercase; }
+        header p { color: #888; font-size: 0.9rem; margin-top: 10px; letter-spacing: 2px; }
 
         .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; padding: 40px 20px; }
-        .card { background: var(--card); width: 100%; max-width: 340px; border-radius: 8px; overflow: hidden; border: 1px solid rgba(176,141,33,0.1); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: auto; }
-        .info { padding: 20px; text-align: left; }
-        .title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
-        .title-row h3 { color: var(--gold); font-size: 1.1rem; }
-        .price { font-weight: bold; }
-        .details { color: #777; font-size: 0.8rem; margin-bottom: 15px; }
-        .buy-btn { width: 100%; padding: 12px; background: var(--gold); color: white; border: none; font-weight: bold; cursor: pointer; }
+        .card { background: var(--card); width: 100%; max-width: 340px; border-radius: 12px; overflow: hidden; border: 1px solid rgba(176,141,33,0.15); box-shadow: 0 10px 25px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(176,141,33,0.1); }
+        .card img { width: 100%; height: auto; display: block; }
+        
+        .info { padding: 25px; text-align: left; }
+        .title-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+        .title-row h3 { color: var(--gold); font-size: 1.2rem; font-weight: 600; }
+        .price { font-weight: bold; font-size: 1.1rem; color: var(--text); }
+        .details { color: #777; font-size: 0.85rem; margin-bottom: 20px; line-height: 1.5; }
+        
+        .buy-btn { width: 100%; padding: 14px; background: var(--gold); color: white; border: none; font-weight: bold; cursor: pointer; letter-spacing: 1.5px; border-radius: 6px; transition: 0.3s; }
+        .buy-btn:hover { background: #8e721a; }
     </style>
 </head>
 <body>
+
     <script>
         if (!localStorage.getItem('user')) { window.location.href = "login.html"; }
     </script>
@@ -41,7 +46,7 @@
 
     <header>
         <h1>RAO'S COLLECTION</h1>
-        <p>Exquisite Stones, Timeless Elegance</p>
+        <p>TIMLESS ELEGANCE & RARE STONES</p>
     </header>
 
     <div class="grid">
@@ -49,23 +54,25 @@
             <img src="s1.jpg" alt="Sapphire">
             <div class="info">
                 <div class="title-row"><h3>Royal Sapphire</h3><span class="price">$1,200</span></div>
-                <p class="details">Origin: Sri Lanka | Clarity: VVS Grade</p>
+                <p class="details">Origin: Sri Lanka | Clarity: VVS Grade<br>Deep velvet blue with exceptional sparkle.</p>
                 <button class="buy-btn" onclick="sendEmail('Royal Sapphire')">INQUIRE NOW</button>
             </div>
         </div>
+
         <div class="card">
             <img src="o1.png" alt="Opal">
             <div class="info">
                 <div class="title-row"><h3>Mexican Fire Opal</h3><span class="price">$850</span></div>
-                <p class="details">Origin: Mexico | Effect: Iridescent Glow</p>
+                <p class="details">Origin: Mexico | Effect: Iridescent Glow<br>A rare gem with a play of fiery colors.</p>
                 <button class="buy-btn" onclick="sendEmail('Mexican Fire Opal')">INQUIRE NOW</button>
             </div>
         </div>
+
         <div class="card">
             <img src="e1.png" alt="Emerald">
             <div class="info">
                 <div class="title-row"><h3>Royal Emerald</h3><span class="price">$1,500</span></div>
-                <p class="details">Origin: Colombia | Clarity: Eye-Clean</p>
+                <p class="details">Origin: Colombia | Clarity: Eye-Clean<br>Vibrant green with a classic emerald cut.</p>
                 <button class="buy-btn" onclick="sendEmail('Royal Emerald')">INQUIRE NOW</button>
             </div>
         </div>
@@ -83,18 +90,18 @@
                 btn.innerText = "Light Mode";
             }
         }
+
         function logout() {
             localStorage.removeItem('user');
             window.location.href = "login.html";
         }
-    function sendEmail(gemName) {
-    const email = "btwsamiyamalik@gmail.com"; // Yahan apni sahi email likhein
-    const subject = "Inquiry about " + gemName;
-    const body = "Hello, I am interested in the " + gemName + ". Please provide more details.";
-    
-    // Ye line user ka email app (Outlook/Gmail) khol degi
-    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }
+
+        function sendEmail(gemName) {
+            const email = "btwsamiyamalik@gmail.com";
+            const subject = "Inquiry: " + gemName;
+            const body = "I am interested in the " + gemName + ". Please share availability.";
+            window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
     </script>
 </body>
 </html>
