@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>SEO Tool | Barira Rao</title>
+    <meta charset="UTF-8">
+    <title>SEO Meta Generator | Barira Rao</title>
     <style>
-        body { background: #0f172a; color: white; font-family: sans-serif; padding: 40px; }
-        .box { background: #1e293b; padding: 30px; border-radius: 12px; max-width: 600px; margin: auto; }
-        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 6px; }
-        button { background: #38bdf8; color: #0f172a; padding: 12px 24px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        body { background: #061612; color: white; font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; }
+        .tool-card { background: #0c0c0c; padding: 40px; border-radius: 20px; border: 1px solid #1a2e29; width: 90%; max-width: 500px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        h2 { color: #c5a059; letter-spacing: 2px; margin-bottom: 20px; }
+        input, textarea { width: 100%; padding: 12px; margin: 10px 0; background: #111; border: 1px solid #333; color: white; border-radius: 8px; box-sizing: border-box; }
+        button { width: 100%; background: #c5a059; color: black; padding: 14px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: 0.3s; }
+        button:hover { background: #e2bd76; }
+        #result { margin-top: 20px; padding: 15px; background: #000; border-left: 4px solid #c5a059; display: none; font-family: monospace; font-size: 0.85rem; color: #10b981; white-space: pre-wrap; word-break: break-all; }
+        .back-link { display: block; margin-top: 20px; color: #555; text-decoration: none; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
 <body>
-    <div class="box">
-        <h2>Meta Tag Generator</h2>
-        <input id="t" placeholder="Site Title">
-        <textarea id="d" placeholder="Site Description"></textarea>
-        <button onclick="gen()">Generate</button>
-        <pre id="out" style="margin-top:20px; color:#38bdf8;"></pre>
+    <div class="tool-card">
+        <h2>SEO Meta Tool</h2>
+        <p style="font-size: 0.8rem; color: #888; margin-bottom: 20px;">Generate technical meta tags for your website.</p>
+        <input type="text" id="siteTitle" placeholder="Website Title">
+        <textarea id="siteDesc" rows="3" placeholder="Website Description (SEO friendly)"></textarea>
+        <button onclick="generateTags()">GENERATE TAGS</button>
+        <div id="result"></div>
+        <a href="index.html" class="back-link">← Return to Portfolio</a>
     </div>
+
     <script>
-        function gen() {
-            const t = document.getElementById('t').value, d = document.getElementById('d').value;
-            document.getElementById('out').innerText = `<title>${t}</title>\n<meta name="description" content="${d}">`;
+        function generateTags() {
+            const title = document.getElementById('siteTitle').value;
+            const desc = document.getElementById('siteDesc').value;
+            const resultBox = document.getElementById('result');
+            
+            if(!title || !desc) return alert("Please fill all fields");
+
+            const code = `\n<title>${title}</title>\n<meta name="description" content="${desc}">\n<meta name="author" content="Barira Rao">`;
+            
+            resultBox.innerText = code;
+            resultBox.style.display = 'block';
         }
     </script>
 </body>
