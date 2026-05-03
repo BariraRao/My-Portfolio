@@ -1,53 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Barira Rao's Collection</title>
+    <meta charset="UTF-8"><title>Barique Gems | Collection</title>
     <style>
-        :root { --gold: #c5a059; --dark: #0a0a0a; --card: #141414; }
-        body { background: var(--dark); color: #fff; font-family: 'Georgia', serif; margin: 0; text-align: center; }
-        .nav { padding: 20px; display: flex; justify-content: flex-end; gap: 20px; }
-        header { padding: 60px 0; border-bottom: 1px solid #222; }
-        h1 { font-size: 2.5rem; letter-spacing: 8px; color: var(--gold); }
-        .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; padding: 50px; }
-        .card { background: var(--card); width: 320px; border: 1px solid #222; border-radius: 4px; overflow: hidden; text-align: left; transition: 0.4s; }
-        .card:hover { border-color: var(--gold); transform: translateY(-10px); }
-        .info { padding: 20px; }
-        .price { color: var(--gold); font-size: 1.2rem; font-weight: bold; }
-        .details { font-size: 0.8rem; color: #888; margin: 10px 0; height: 40px; }
-        .btn { width: 100%; padding: 12px; background: var(--gold); border: none; font-weight: bold; cursor: pointer; }
+        body { background: #050505; color: #fff; font-family: 'Georgia', serif; margin: 0; }
+        header { text-align: center; padding: 50px; border-bottom: 1px solid #111; }
+        header img { height: 120px; margin-bottom: 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px; max-width: 1200px; margin: 0 auto; }
+        .card { background: #0c0c0c; border-radius: 15px; overflow: hidden; border: 1px solid #1a1a1a; transition: 0.3s; }
+        .card:hover { border-color: #c5a059; transform: translateY(-10px); }
+        .img-container { width: 100%; height: 350px; overflow: hidden; }
+        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        .info { padding: 25px; }
+        .gold { color: #c5a059; font-weight: bold; font-size: 1.2rem; }
+        .btn { width: 100%; padding: 12px; background: #c5a059; border: none; font-weight: bold; cursor: pointer; margin-top: 15px; }
     </style>
 </head>
 <body>
     <script>if(!localStorage.getItem('user')) window.location.href="login.html";</script>
-    <div class="nav"><button onclick="localStorage.removeItem('user');location.href='login.html'">LOGOUT</button></div>
-    <header><h1>BARIRA RAO</h1><p>THE LUXURY COLLECTION</p></header>
-       <div class="grid">
+    <header>
+        <img src="logo.png" alt="Logo">
+        <h1 style="letter-spacing: 8px; color:#c5a059;">BARIQUE GEMS</h1>
+    </header>
+    <div class="grid">
         <div class="card">
-            <img src="s1.jpg" alt="Royal Sapphire">
+            <div class="img-container"><img src="s1.jpg"></div>
             <div class="info">
-                <div class="title-row"><h3>Royal Sapphire</h3><span class="price">$1,200</span></div>
-                <p class="details">Origin: Sri Lanka | Clarity: VVS Grade<br>Deep velvet blue with exceptional sparkle.</p>
-                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Royal Sapphire'">INQUIRE NOW</button>
+                <h3>Royal Sapphire</h3><p class="gold">$1,200</p>
+                <p style="color:#666; font-size:0.8rem;">Origin: Sri Lanka | Deep Blue</p>
+                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry'">INQUIRE</button>
             </div>
         </div>
-
-        <div class="card">
-            <img src="o1.png" alt="Mexican Fire Opal">
-            <div class="info">
-                <div class="title-row"><h3>Mexican Fire Opal</h3><span class="price">$850</span></div>
-                <p class="details">Origin: Mexico | Effect: Iridescent Glow<br>A rare gem with a play of fiery colors.</p>
-                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Mexican Fire Opal'">INQUIRE NOW</button>
-            </div>
         </div>
-
-        <div class="card">
-            <img src="e1.png" alt="Royal Emerald">
-            <div class="info">
-                <div class="title-row"><h3>Royal Emerald</h3><span class="price">$1,500</span></div>
-                <p class="details">Origin: Colombia | Clarity: Eye-Clean<br>Vibrant green with a classic emerald cut.</p>
-                <button class="btn" onclick="location.href='mailto:btwsamiyamalik@gmail.com?subject=Inquiry: Royal Emerald'">INQUIRE NOW</button>
-            </div>
-        </div>
-       </div>
 </body>
 </html>
