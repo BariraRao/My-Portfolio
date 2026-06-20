@@ -11,6 +11,8 @@
         button { width: 100%; background: #c5a059; color: black; padding: 14px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; margin-top: 15px; transition: 0.3s; }
         button:hover { background: #e2bd76; }
         #result { margin-top: 20px; padding: 15px; background: #000; border-left: 4px solid #c5a059; display: none; font-family: monospace; font-size: 0.85rem; color: #10b981; white-space: pre-wrap; word-break: break-all; }
+        #copyBtn { background: #10b981; color: black; display: none; margin-top: 10px; padding: 10px; font-size: 0.85rem; }
+        #copyBtn:hover { background: #34d399; }
         .back-link { display: block; margin-top: 20px; color: #555; text-decoration: none; font-size: 0.8rem; text-align: center; }
     </style>
 </head>
@@ -20,23 +22,43 @@
         <p style="font-size: 0.8rem; color: #888; margin-bottom: 20px;">Generate technical meta tags for your website.</p>
         <input type="text" id="siteTitle" placeholder="Website Title">
         <textarea id="siteDesc" rows="3" placeholder="Website Description (SEO friendly)"></textarea>
+        
         <button onclick="generateTags()">GENERATE TAGS</button>
+        
         <div id="result"></div>
+        <button id="copyBtn" onclick="copyToClipboard()">COPY TAGS</button>
+        
         <a href="index.html" class="back-link">← Return to Portfolio</a>
     </div>
 
     <script>
+        let generatedCode = "";
+
         function generateTags() {
             const title = document.getElementById('siteTitle').value;
             const desc = document.getElementById('siteDesc').value;
             const resultBox = document.getElementById('result');
+            const copyBtn = document.getElementById('copyBtn');
             
             if(!title || !desc) return alert("Please fill all fields");
 
-            const code = `\n<title>${title}</title>\n<meta name="description" content="${desc}">\n<meta name="author" content="Barira Rao">`;
+            generatedCode = `<title>${title}</title>\n<meta name="description" content="${desc}">\n<meta name="author" content="Barira Rao">`;
             
-            resultBox.innerText = code;
+            resultBox.innerText = generatedCode;
             resultBox.style.display = 'block';
+            copyBtn.style.display = 'block';
+            copyBtn.innerText = "COPY TAGS";
+        }
+
+        function copyToClipboard() {
+            if (!generatedCode) return;
+            
+            navigator.clipboard.writeText(generatedCode).then(() => {
+                const copyBtn = document.getElementById('copyBtn');
+                copyBtn.innerText = "Copied!";
+            }).catch(err => {
+                alert("Failed to copy code ", err);
+            });
         }
     </script>
 </body>
