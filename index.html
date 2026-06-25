@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background: #030a08; color: #fff; font-family: 'Segoe UI', sans-serif; }
-       .bg-graphic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-image: url('1000038841.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    opacity: 0.08; 
-    pointer-events: none;
-    z-index: 0;
-}
-        .glass-card { background: #06120e; border: 1px solid #132722; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: 0.4s ease; }
+        .bg-graphic {
+            position: absolute;
+            top: 5%;            
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 500px;    
+            height: 80vh;
+            background-image: url('1000038841.jpg');
+            background-size: contain; 
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.12;    
+            pointer-events: none;
+            z-index: 0;
+        }
+              .glass-card { background: #06120e; border: 1px solid #132722; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: 0.4s ease; }
         .glass-card:hover { border-color: #c5a059; transform: translateY(-4px); }
         .glow-text { color: #c5a059; text-shadow: 0 0 20px rgba(197,160,89,0.2); }
         .tech-badge { background: #091714; border: 1px solid #17332c; color: #a3b8b0; }
@@ -81,8 +84,7 @@
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">JS</span>
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">HTML/CSS</span>
                     </div>
-                    <a href="login.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a> 
-                     <a href="boutique.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">LOGIN →</a>
+                    <a href="login.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a>
                 </div>
             </div>
             
