@@ -9,27 +9,11 @@
     <style>
         html { scroll-behavior: smooth; }
         body { background-color: #f4f1ea; color: #1a1a1a; font-family: 'Segoe UI', sans-serif; }
-        .gold-text { color: #996515; }
-        .gold-border { border-color: #b8860b; }
+        .gold-text { color: #b8860b; }
         .gold-btn { background-color: #b8860b; color: #ffffff; transition: all 0.3s ease; }
         .gold-btn:hover { background-color: #996515; }
-        .section-box { 
-            position: relative;
-            min-height: 90vh; 
-            display: flex; 
-            align-items: center; 
-            background-repeat: no-repeat; 
-            background-size: cover; 
-            background-position: center right;
-            border-bottom: 3px solid #e1dbcd;
-        }
-        .content-overlay {
-            background: linear-gradient(to right, #f4f1ea 45%, rgba(244, 241, 234, 0.85) 70%, rgba(244, 241, 234, 0.2) 100%);
-            width: 100%;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-        }
+        .section-box { border-bottom: 2px solid #e1dbcd; }
+        .avatar-box { border: 1px solid #e1dbcd; box-shadow: 0 4px 20px rgba(0,0,0,0.04); }
     </style>
 </head>
 <body class="relative min-h-screen overflow-x-hidden">
@@ -38,95 +22,99 @@
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <h1 class="text-xl font-bold tracking-widest gold-text">BARIRA RAO</h1>
             <div class="flex items-center gap-6 text-sm font-semibold tracking-wider">
-                <a href="#home" class="text-[#1a1a1a] hover:text-[#996515] transition">HOME</a>
-                <a href="#portfolio" class="text-[#1a1a1a] hover:text-[#996515] transition">PORTFOLIO</a>
-                <a href="#about" class="text-[#1a1a1a] hover:text-[#996515] transition">ABOUT ME</a>
+                <a href="#home" class="text-[#1a1a1a] hover:text-[#b8860b] transition">HOME</a>
+                <a href="#portfolio" class="text-[#1a1a1a] hover:text-[#b8860b] transition">PORTFOLIO</a>
+                <a href="#about" class="text-[#1a1a1a] hover:text-[#b8860b] transition">ABOUT ME</a>
                 <a href="#contact" class="bg-[#b8860b] text-white px-5 py-2 rounded font-bold hover:bg-[#996515] transition shadow">HIRE ME</a>
             </div>
         </div>
     </nav>
 
-    <div id="home" class="section-box pt-20" style="background-image: url('1000038841.jpg');">
-        <div class="content-overlay px-6 sm:px-12">
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="max-w-xl space-y-6">
-                    <h2 class="text-4xl md:text-6xl font-bold tracking-tight leading-tight text-[#1a1a1a]">
-                        Hi, I'm Barira Rao <br><span class="gold-text">A UI/UX Developer</span>
-                    </h2>
-                    <p class="text-[#4a4a4a] text-base md:text-lg leading-relaxed font-medium">
-                        I craft user-friendly interfaces and clean design solutions that connect data structures with high-end aesthetic presentation layers.
-                    </p>
-                    <div class="pt-2">
-                        <a href="about-detailed.html" class="inline-block gold-btn px-8 py-3.5 font-bold tracking-wider rounded shadow-lg">
-                            Read More
-                        </a>
-                    </div>
+    <header id="home" class="section-box pt-36 pb-24 px-6 max-w-6xl mx-auto min-h-[85vh] flex items-center">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+            <div class="space-y-6">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight leading-tight text-[#1a1a1a]">
+                    Hi, I'm Barira Rao <br><span class="gold-text">A UI/UX Developer</span>
+                </h2>
+                <p class="text-[#4a4a4a] text-base md:text-lg leading-relaxed max-w-lg font-medium">
+                    I craft user-friendly interfaces and clean design solutions that connect data structures with high-end aesthetic presentation layers.
+                </p>
+                <div class="pt-2">
+                    <a href="about-detailed.html" class="inline-block gold-btn px-8 py-3.5 font-bold tracking-wider rounded shadow">
+                        Read More
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <div class="w-full max-w-[380px] aspect-square rounded-2xl overflow-hidden avatar-box">
+                    <img src="1000038841.jpg" alt="Barira Rao Portfolio Avatar" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
-    </div>
+    </header>
 
-    <div id="portfolio" class="section-box" style="background-image: url('1000038841.jpg');">
-        <div class="content-overlay px-6 sm:px-12">
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="max-w-xl space-y-6">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#1a1a1a]">My Portfolio</h3>
-                    <p class="text-[#4a4a4a] text-base leading-relaxed font-medium">
-                        I design intuitive and interactive tools that balance computational backend logic with elegant user interfaces. Explore my technical products, local configurations, and production utilities directly.
-                    </p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                        <div class="p-4 bg-white border border-[#e1dbcd] rounded-xl border-l-4 border-l-[#b8860b] shadow-sm">
-                            <span class="text-xs gold-text font-bold block mb-1">BOUTIQUE APPLICATION</span>
-                            <h4 class="font-bold text-[#1a1a1a] mb-2">Barique Gems Portal</h4>
-                            <button onclick="launchBGP()" class="text-xs gold-text hover:underline font-extrabold text-left cursor-pointer">GATEWAY →</button>
-                        </div>
-                        <div class="p-4 bg-white border border-[#e1dbcd] rounded-xl border-l-4 border-l-[#b8860b] shadow-sm">
-                            <span class="text-xs gold-text font-bold block mb-1">UTILITY LAYER</span>
-                            <h4 class="font-bold text-[#1a1a1a] mb-2">SEO Tag Generator</h4>
-                            <a href="seo-tool.html" class="text-xs gold-text hover:underline font-extrabold">LAUNCH TOOL →</a>
-                        </div>
+    <section id="portfolio" class="section-box py-24 px-6 max-w-6xl mx-auto min-h-[85vh] flex items-center">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+            <div class="flex justify-center md:justify-start order-2 md:order-1">
+                <div class="w-full max-w-[380px] aspect-square rounded-2xl overflow-hidden avatar-box">
+                    <img src="1000038841.jpg" alt="Portfolio Concept Layout Image" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="space-y-6 order-1 md:order-2">
+                <h3 class="text-3xl md:text-4xl font-bold text-[#1a1a1a]">My Portfolio</h3>
+                <p class="text-[#4a4a4a] text-base leading-relaxed font-medium">
+                    I design intuitive digital tools and client-facing web panels. Each application is engineered with an emphasis on minimalist design alignment rules and performant front-end delivery configurations.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="p-5 bg-white border border-[#e1dbcd] rounded-xl border-l-4 border-l-[#b8860b] shadow-sm">
+                        <span class="text-xs gold-text font-bold block mb-1">BOUTIQUE APPLICATION</span>
+                        <h4 class="font-bold text-[#1a1a1a] mb-2">Barique Gems Portal</h4>
+                        <button onclick="launchBGP()" class="text-xs gold-text hover:underline font-extrabold tracking-wider text-left cursor-pointer">GATEWAY →</button>
                     </div>
-                    <div class="pt-2">
-                        <a href="#about" class="inline-block gold-btn px-8 py-3.5 font-bold tracking-wider rounded shadow">
-                            View My Portfolio
-                        </a>
+                    <div class="p-5 bg-white border border-[#e1dbcd] rounded-xl border-l-4 border-l-[#b8860b] shadow-sm">
+                        <span class="text-xs gold-text font-bold block mb-1">UTILITY TOOL</span>
+                        <h4 class="font-bold text-[#1a1a1a] mb-2">SEO Meta Tag Generator</h4>
+                        <a href="seo-tool.html" class="text-xs gold-text hover:underline font-extrabold tracking-wider">LAUNCH TOOL →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="about" class="section-box" style="background-image: url('1000038841.jpg');">
-        <div class="content-overlay px-6 sm:px-12">
-            <div class="max-w-6xl mx-auto w-full">
-                <div class="max-w-xl space-y-6">
-                    <h3 class="text-3xl md:text-4xl font-bold text-[#1a1a1a]">About Me</h3>
-                    <p class="text-[#4a4a4a] text-base leading-relaxed font-medium">
-                        Based in Multan, Pakistan, I create responsive, data-driven web environments. My design architecture strictly balances performance and clean alignment rules, ensuring every interface looks premium and operates smoothly.
-                    </p>
-                    <div class="flex flex-wrap gap-2 pt-2">
-                        <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">HTML5 / CSS3</span>
-                        <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">JavaScript (ES6+)</span>
-                        <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">Tailwind CSS</span>
-                        <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">Git & GitHub</span>
-                    </div>
-                    <div class="pt-2">
-                        <a href="about-detailed.html" class="inline-block gold-btn px-8 py-3.5 font-bold tracking-wider rounded shadow-lg">
-                            View More
-                        </a>
-                    </div>
+    <section id="about" class="section-box py-24 px-6 max-w-6xl mx-auto min-h-[85vh] flex items-center">
+        <div class="grid md:grid-cols-2 gap-12 items-center w-full">
+            <div class="space-y-6">
+                <h3 class="text-3xl md:text-4xl font-bold text-[#1a1a1a]">About Me</h3>
+                <p class="text-[#4a4a4a] text-base leading-relaxed font-medium">
+                    Based in Multan, Pakistan, I focus on building cleanly aligned visual ecosystems, customized local configuration structures, and elegant interface layouts that perform beautifully across all devices.
+                </p>
+                <div class="flex flex-wrap gap-2 pt-2">
+                    <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">HTML5 / CSS3</span>
+                    <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">JavaScript (ES6+)</span>
+                    <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">Tailwind CSS</span>
+                    <span class="text-xs font-bold px-3 py-1.5 bg-white border border-[#b8860b] text-[#1a1a1a] rounded shadow-sm">Git & GitHub</span>
+                </div>
+                <div class="pt-4">
+                    <a href="about-detailed.html" class="inline-block gold-btn px-8 py-3.5 font-bold tracking-wider rounded shadow-lg">
+                        View More
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <div class="w-full max-w-[380px] aspect-square rounded-2xl overflow-hidden avatar-box">
+                    <img src="1000038841.jpg" alt="About Barira Professional Identity Card Graphic" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer id="contact" class="py-20 text-center px-6 bg-white">
         <div class="max-w-2xl mx-auto space-y-6">
             <h3 class="text-3xl font-bold text-[#1a1a1a]">Let's Connect</h3>
             <p class="text-[#4a4a4a] text-sm max-w-md mx-auto font-medium">
-                Always open to web applications engineering, dynamic scripting setups, and collaborative development architecture.
+                Available for secure web logic building, dynamic interfaces, and visual layout production pipelines.
             </p>
-            <div class="flex center justify-center gap-4 pt-2">
+            <div class="flex justify-center gap-4 pt-2">
                 <a href="https://github.com/BariraRao" target="_blank" class="w-12 h-12 rounded-xl border-2 border-[#b8860b] bg-white flex justify-center items-center text-[#1a1a1a] hover:bg-[#b8860b] hover:text-white transition text-xl shadow-md">
                     <i class="fab fa-github"></i>
                 </a>
@@ -134,7 +122,7 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            <div class="pt-8 text-[#996515] text-xs font-bold font-mono tracking-widest">
+            <div class="pt-8 text-[#b8860b] text-xs font-bold font-mono tracking-widest">
                 © 2026 BARIRA RAO • PK
             </div>
         </div>
@@ -144,11 +132,7 @@
         function launchBGP() {
             localStorage.setItem('isLoggedIn', 'true');
             localStorage.setItem('session_active', 'true');
-            localStorage.setItem('loggedIn', 'true'); 
-            localStorage.setItem('userLoggedIn', 'true');
-            setTimeout(function() {
-                window.location.href = 'boutique.html';
-            }, 50);
+            window.location.href = 'boutique.html';
         }
     </script>
 
