@@ -8,23 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background: #030a08; color: #fff; font-family: 'Segoe UI', sans-serif; }
-        .bg-graphic {
-            position: absolute;
-            top: 5%;            
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            max-width: 500px;    
-            height: 80vh;
-            background-image: url('1000038841.jpg');
-            background-size: contain; 
-            background-repeat: no-repeat;
-            background-position: center;
-            opacity: 0.12;    
-            pointer-events: none;
-            z-index: 0;
-        }
-              .glass-card { background: #06120e; border: 1px solid #132722; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: 0.4s ease; }
+        .glass-card { background: #06120e; border: 1px solid #132722; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: 0.4s ease; }
         .glass-card:hover { border-color: #c5a059; transform: translateY(-4px); }
         .glow-text { color: #c5a059; text-shadow: 0 0 20px rgba(197,160,89,0.2); }
         .tech-badge { background: #091714; border: 1px solid #17332c; color: #a3b8b0; }
@@ -33,8 +17,7 @@
 </head>
 <body class="relative min-h-screen overflow-x-hidden">
 
-    <div class="bg-graphic hidden md:block"></div>
-
+    
     <nav class="fixed top-0 w-full z-50 bg-[#030a08]/95 backdrop-blur-md border-b border-[#132722] py-4 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto flex justify-between items-center gap-4">
             <h1 class="text-base md:text-xl font-bold tracking-widest glow-text shrink-0">BARIRA RAO</h1>
@@ -45,58 +28,76 @@
         </div>
     </nav>
 
-    <header class="relative pt-40 pb-20 px-6 max-w-4xl mx-auto text-center md:text-left z-10">
-        <div class="block md:hidden mx-auto mb-6 w-24 h-24 rounded-full overflow-hidden border-2 border-[#c5a059] shadow-lg shadow-[#c5a059]/10 bg-[#06120e]">
-            <img src="1000038841.jpg" alt="Profile Avatar" class="w-full h-full object-cover">
-        </div>
-        <h2 class="text-3xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-white">
-            I build clean, functional web experiences
-        </h2>
-        <p class="text-gray-400 max-w-2xl text-sm md:text-lg leading-relaxed mb-8">
-            Frontend Developer & Web Tools Specialist based in Multan, Pakistan. Focused on creating secure, data-driven full-stack setups with premium visual aesthetics.
-        </p>
-        <div class="flex flex-wrap justify-center md:justify-start items-center gap-4">
-            <a href="#projects" class="px-6 py-3 rounded-xl bg-[#c5a059] text-black font-bold hover:bg-[#e2bd76] transition text-sm tracking-wider">VIEW WORK</a>
-            <div class="flex items-center gap-3">
-                <a href="https://github.com/BariraRao" target="_blank" class="w-11 h-11 rounded-xl border border-[#132722] bg-[#06120e] flex justify-center items-center text-gray-400 hover:text-[#c5a059] hover:border-[#c5a059] transition text-lg">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:btwsamiyamalik@gmail.com" class="w-11 h-11 rounded-xl border border-[#132722] bg-[#06120e] flex justify-center items-center text-gray-400 hover:text-[#c5a059] hover:border-[#c5a059] transition text-lg">
-                    <i class="fas fa-envelope"></i>
-                </a>
+   
+    <header class="relative pt-32 pb-16 px-6 max-w-6xl mx-auto z-10">
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            
+            
+            <div class="text-center md:text-left order-2 md:order-1">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 tracking-tight leading-tight text-white">
+                    I build clean, functional web experiences
+                </h2>
+                <p class="text-gray-400 max-w-xl text-sm md:text-base leading-relaxed mb-8">
+                    Frontend Developer & Web Tools Specialist based in Multan, Pakistan. Focused on creating secure, data-driven full-stack setups with premium visual aesthetics.
+                </p>
+                <div class="flex flex-wrap justify-center md:justify-start items-center gap-4">
+                    <a href="#projects" class="px-6 py-3 rounded-xl bg-[#c5a059] text-black font-bold hover:bg-[#e2bd76] transition text-sm tracking-wider">VIEW WORK</a>
+                    <div class="flex items-center gap-3">
+                        <a href="https://github.com/BariraRao" target="_blank" class="w-11 h-11 rounded-xl border border-[#132722] bg-[#06120e] flex justify-center items-center text-gray-400 hover:text-[#c5a059] hover:border-[#c5a059] transition text-lg">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:btwsamiyamalik@gmail.com" class="w-11 h-11 rounded-xl border border-[#132722] bg-[#06120e] flex justify-center items-center text-gray-400 hover:text-[#c5a059] hover:border-[#c5a059] transition text-lg">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+
+            
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="w-full max-w-[380px] md:max-w-[420px] aspect-square rounded-2xl overflow-hidden border border-[#132722] bg-[#06120e] shadow-2xl shadow-[#c5a059]/5">
+                    <img src="1000038841.jpg" alt="Barira Rao" class="w-full h-full object-cover object-center">
+                </div>
+            </div>
+
         </div>
     </header>
 
+    
     <section id="projects" class="py-16 max-w-6xl mx-auto px-6 relative z-10">
         <h3 class="text-xs font-bold tracking-widest text-[#445450] uppercase mb-8">LAB DEPLOYMENTS</h3>
         <div class="grid md:grid-cols-2 gap-8">
-            <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between">
-                <div>
+            
+            
+            <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between relative overflow-hidden group">
+                <div class="absolute -right-10 -top-10 w-32 h-32 bg-[#c5a059]/5 rounded-full blur-2xl transition-all duration-500 group-hover:bg-[#c5a059]/10 group-hover:scale-125 pointer-events-none"></div>
+                
+                <div class="relative z-10">
                     <div class="w-10 h-10 rounded-lg icon-box flex items-center justify-center text-[#c5a059] mb-4 font-mono text-xs font-bold">
                         BGP
                     </div>
                     <h4 class="text-xl font-bold mb-3 glow-text">Barique Gems Portal</h4>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">A high-end gemstone boutique application featuring multi-user local storage authentication and an elite luxury layout layer.</p>
                 </div>
-                <div class="pt-4 border-t border-[#132722]/50 flex flex-col gap-3">
+                <div class="pt-4 border-t border-[#132722]/50 flex flex-col gap-3 relative z-10">
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">JS</span>
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">HTML/CSS</span>
                     </div>
-                    <a href="login.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a>
+                    <a href="boutique.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a>
                 </div>
             </div>
+
             
-            <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between">
-                <div>
+            <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between relative overflow-hidden group">
+                <div class="relative z-10">
                     <div class="w-10 h-10 rounded-lg icon-box flex items-center justify-center text-[#c5a059] mb-4 font-mono text-xs font-bold">
                         SEO
                     </div>
                     <h4 class="text-xl font-bold mb-3 glow-text">SEO Meta Tag Generator</h4>
                     <p class="text-gray-400 text-sm leading-relaxed mb-6">A clean, dynamic tool built to automate standard metadata configuration blocks with an instant clipboard export function.</p>
                 </div>
-                <div class="pt-4 border-t border-[#132722]/50 flex flex-col gap-3">
+                <div class="pt-4 border-t border-[#132722]/50 flex flex-col gap-3 relative z-10">
                     <div class="flex flex-wrap gap-2">
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">VANILLA JS</span>
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">UTILITY</span>
@@ -108,6 +109,7 @@
         </div>
     </section>
 
+    
     <footer id="contact" class="py-16 border-t border-[#132722]/50 text-center px-6 relative z-10 bg-[#040d0b]/20">
         <div class="max-w-2xl mx-auto">
             <h3 class="text-2xl font-bold mb-4">Let's Connect</h3>
