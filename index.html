@@ -8,21 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { background: #030a08; color: #fff; font-family: 'Segoe UI', sans-serif; }
-        .bg-graphic {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            max-width: 550px;
-            height: 100%;
-            background-image: url('1000038841.jpg');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: top right;
-            opacity: 0.12;
-            pointer-events: none;
-            z-index: 0;
-        }
+       .bg-graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('1000038841.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.08; 
+    pointer-events: none;
+    z-index: 0;
+}
         .glass-card { background: #06120e; border: 1px solid #132722; box-shadow: 0 20px 40px rgba(0,0,0,0.6); transition: 0.4s ease; }
         .glass-card:hover { border-color: #c5a059; transform: translateY(-4px); }
         .glow-text { color: #c5a059; text-shadow: 0 0 20px rgba(197,160,89,0.2); }
@@ -70,8 +68,6 @@
     <section id="projects" class="py-16 max-w-6xl mx-auto px-6 relative z-10">
         <h3 class="text-xs font-bold tracking-widest text-[#445450] uppercase mb-8">LAB DEPLOYMENTS</h3>
         <div class="grid md:grid-cols-2 gap-8">
-            
-            <!-- Barique Gems Portal Card - Fixed Alignment -->
             <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between">
                 <div>
                     <div class="w-10 h-10 rounded-lg icon-box flex items-center justify-center text-[#c5a059] mb-4 font-mono text-xs font-bold">
@@ -85,11 +81,11 @@
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">JS</span>
                         <span class="text-[10px] px-2 py-1 tech-badge rounded font-mono">HTML/CSS</span>
                     </div>
-                    <a href="login.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a>
+                    <a href="login.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">GATEWAY →</a> 
+                     <a href="boutique.html" class="text-xs font-bold text-[#c5a059] hover:underline tracking-wider self-start">LOGIN →</a>
                 </div>
             </div>
-
-            <!-- SEO Meta Tag Generator Card - Fixed Alignment -->
+            
             <div class="p-6 sm:p-8 rounded-2xl glass-card flex flex-col justify-between">
                 <div>
                     <div class="w-10 h-10 rounded-lg icon-box flex items-center justify-center text-[#c5a059] mb-4 font-mono text-xs font-bold">
